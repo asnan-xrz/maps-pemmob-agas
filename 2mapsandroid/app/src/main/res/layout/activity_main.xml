@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/idLokasiLat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Latitude"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_margin="6dp" />
+
+    <EditText
+        android:id="@+id/idLokasiLng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Longitude"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_below="@id/idLokasiLat"
+        android:layout_margin="6dp" />
+
+    <Button
+        android:id="@+id/idGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLokasiLng"
+        android:layout_margin="6dp"
+        android:layout_alignParentEnd="true"
+        android:text="Go" />
+
+    <EditText
+        android:id="@+id/idDaerah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter City"
+        android:inputType="text"
+        android:layout_below="@id/idGo"
+        android:layout_margin="6dp" />
+
+    <Button
+        android:id="@+id/idCari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idDaerah"
+        android:layout_margin="6dp"
+        android:layout_alignParentEnd="true"
+        android:text="Cari" />
+
+    <fragment
+        android:id="@+id/id_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idCari"
+        android:layout_margin="6dp" />
+
+</RelativeLayout>
